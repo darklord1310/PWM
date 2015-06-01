@@ -1,3 +1,9 @@
+/*	This is a PWM with a fixed clock of 50Mhz
+ *
+ *	It will produce the output with 10ms of period
+ *	with ON time for 2ms and OFF time for 8ms
+ *
+ */
 module PWM ( clk, reset, PWM_out);
 
 input clk, reset;

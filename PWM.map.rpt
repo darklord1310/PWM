@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PWM
-Sun May 31 20:03:43 2015
+Mon Jun 01 22:26:44 2015
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 31 20:03:43 2015        ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 01 22:26:44 2015        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; PWM                                          ;
 ; Top-level Entity Name              ; PWM                                          ;
@@ -253,7 +253,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun May 31 20:03:42 2015
+    Info: Processing started: Mon Jun 01 22:26:43 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM -c PWM
 Info: Found 1 design units, including 1 entities, in source file pwm.v
     Info: Found entity 1: PWM
@@ -266,7 +266,7 @@ Info: Implemented 52 device resources after synthesis - the final resource count
     Info: Implemented 49 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 216 megabytes
-    Info: Processing ended: Sun May 31 20:03:43 2015
+    Info: Processing ended: Mon Jun 01 22:26:44 2015
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

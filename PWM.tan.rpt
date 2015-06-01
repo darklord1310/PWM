@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for PWM
-Sun May 31 20:04:05 2015
+Mon Jun 01 22:27:00 2015
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -409,7 +409,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun May 31 20:04:05 2015
+    Info: Processing started: Mon Jun 01 22:27:00 2015
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off PWM -c PWM --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk" is an undefined clock
@@ -479,8 +479,8 @@ Info: th for register "counter[15]" (data pin = "reset", clock pin = "clk") is 0
         Info: Total cell delay = 1.955 ns ( 69.11 % )
         Info: Total interconnect delay = 0.874 ns ( 30.89 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 176 megabytes
-    Info: Processing ended: Sun May 31 20:04:05 2015
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Mon Jun 01 22:27:00 2015
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
