@@ -1,0 +1,39 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\91\modelsim_ase\examples
+vPWM
+I2ViGcXl77_RT;O2cgeJ2X2
+VUj@UhkkG6OJFVzoB5@>l@2
+Z0 dC:\Users\Student\Desktop\PWM
+w1432020041
+8C:/Users/Student/Desktop/PWM/PWM.v
+FC:/Users/Student/Desktop/PWM/PWM.v
+L0 1
+Z1 OV;L;6.5b;42
+r1
+31
+Z2 !s102 -nocovercells
+Z3 o-work work -nocovercells -O0
+n@p@w@m
+!s100 oiCi@>dPVCSO:BKoO`44f1
+!s85 0
+!s101 -O0
+vPWM_tb
+!s100 <ET90BQ0^LH1K:K9B58CW1
+IR>G:]hfX4idof`i9`]8oE3
+ViENnfUnc]P^I0WlYVf1T?1
+Z4 dC:\Users\Student\Desktop\PWM
+w1432022026
+8C:/Users/Student/Desktop/PWM/PWM_tb.v
+FC:/Users/Student/Desktop/PWM/PWM_tb.v
+L0 2
+R1
+r1
+!s85 0
+31
+!s101 -O0
+R2
+R3
+n@p@w@m_tb

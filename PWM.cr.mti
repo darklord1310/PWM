@@ -1,0 +1,15 @@
+C:/Users/Student/Desktop/PWM/PWM_tb.v {1 {vlog -work work -nocovercells C:/Users/Student/Desktop/PWM/PWM_tb.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module PWM_tb
+
+Top level modules:
+	PWM_tb
+
+} {} {}} C:/Users/Student/Desktop/PWM/PWM.v {1 {vlog -work work -nocovercells C:/Users/Student/Desktop/PWM/PWM.v
+Model Technology ModelSim ALTERA vlog 6.5b Compiler 2009.10 Oct  1 2009
+-- Compiling module PWM
+
+Top level modules:
+	PWM
+
+} {} {}}

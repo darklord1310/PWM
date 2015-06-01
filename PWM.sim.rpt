@@ -1,0 +1,510 @@
+Simulator report for PWM
+Tue May 26 01:16:38 2015
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 176 nodes    ;
+; Simulation Coverage         ;       1.70 % ;
+; Total Number of Transitions ; 607          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; PWM.vwf    ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       1.70 % ;
+; Total nodes checked                                 ; 176          ;
+; Total output ports checked                          ; 176          ;
+; Total output ports with complete 1/0-value coverage ; 3            ;
+; Total output ports with no 1/0-value coverage       ; 173          ;
+; Total output ports with no 1-value coverage         ; 173          ;
+; Total output ports with no 0-value coverage         ; 173          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------+
+; Complete 1/0-Value Coverage                        ;
++--------------+------------------+------------------+
+; Node Name    ; Output Port Name ; Output Port Type ;
++--------------+------------------+------------------+
+; |PWM|clk     ; |PWM|clk         ; out              ;
+; |PWM|state~0 ; |PWM|state~0     ; out0             ;
+; |PWM|state~5 ; |PWM|state~5     ; out0             ;
++--------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |PWM|state.start             ; |PWM|state.start             ; regout           ;
+; |PWM|state.toggle            ; |PWM|state.toggle            ; regout           ;
+; |PWM|next_state.resetCounter ; |PWM|next_state.resetCounter ; out              ;
+; |PWM|state.resetCounter      ; |PWM|state.resetCounter      ; regout           ;
+; |PWM|reset                   ; |PWM|reset                   ; out              ;
+; |PWM|PWM_out                 ; |PWM|PWM_out                 ; pin_out          ;
+; |PWM|state~1                 ; |PWM|state~1                 ; out0             ;
+; |PWM|Selector0~0             ; |PWM|Selector0~0             ; out0             ;
+; |PWM|PWM_out~0               ; |PWM|PWM_out~0               ; out0             ;
+; |PWM|state.resetCounter~0    ; |PWM|state.resetCounter~0    ; out0             ;
+; |PWM|Selector0~1             ; |PWM|Selector0~1             ; out0             ;
+; |PWM|state~9                 ; |PWM|state~9                 ; out0             ;
+; |PWM|Selector0~2             ; |PWM|Selector0~2             ; out0             ;
+; |PWM|Selector0~3             ; |PWM|Selector0~3             ; out0             ;
+; |PWM|Selector1~0             ; |PWM|Selector1~0             ; out0             ;
+; |PWM|Selector1~1             ; |PWM|Selector1~1             ; out0             ;
+; |PWM|Selector1~2             ; |PWM|Selector1~2             ; out0             ;
+; |PWM|Selector2~0             ; |PWM|Selector2~0             ; out0             ;
+; |PWM|Selector3~1             ; |PWM|Selector3~1             ; out0             ;
+; |PWM|Selector4~1             ; |PWM|Selector4~1             ; out0             ;
+; |PWM|Selector5~1             ; |PWM|Selector5~1             ; out0             ;
+; |PWM|Selector6~1             ; |PWM|Selector6~1             ; out0             ;
+; |PWM|Selector7~1             ; |PWM|Selector7~1             ; out0             ;
+; |PWM|Selector8~1             ; |PWM|Selector8~1             ; out0             ;
+; |PWM|Selector9~1             ; |PWM|Selector9~1             ; out0             ;
+; |PWM|Selector10~1            ; |PWM|Selector10~1            ; out0             ;
+; |PWM|Selector11~1            ; |PWM|Selector11~1            ; out0             ;
+; |PWM|Selector12~1            ; |PWM|Selector12~1            ; out0             ;
+; |PWM|Selector13~1            ; |PWM|Selector13~1            ; out0             ;
+; |PWM|Selector14~1            ; |PWM|Selector14~1            ; out0             ;
+; |PWM|Selector15~1            ; |PWM|Selector15~1            ; out0             ;
+; |PWM|Selector16~1            ; |PWM|Selector16~1            ; out0             ;
+; |PWM|Selector17~1            ; |PWM|Selector17~1            ; out0             ;
+; |PWM|Selector18~1            ; |PWM|Selector18~1            ; out0             ;
+; |PWM|Selector19~1            ; |PWM|Selector19~1            ; out0             ;
+; |PWM|Selector20~1            ; |PWM|Selector20~1            ; out0             ;
+; |PWM|Selector21~1            ; |PWM|Selector21~1            ; out0             ;
+; |PWM|Selector22~1            ; |PWM|Selector22~1            ; out0             ;
+; |PWM|Selector23~1            ; |PWM|Selector23~1            ; out0             ;
+; |PWM|Selector24~1            ; |PWM|Selector24~1            ; out0             ;
+; |PWM|Selector25~1            ; |PWM|Selector25~1            ; out0             ;
+; |PWM|Selector26~1            ; |PWM|Selector26~1            ; out0             ;
+; |PWM|Selector27~1            ; |PWM|Selector27~1            ; out0             ;
+; |PWM|Selector28~1            ; |PWM|Selector28~1            ; out0             ;
+; |PWM|Selector29~1            ; |PWM|Selector29~1            ; out0             ;
+; |PWM|Selector30~1            ; |PWM|Selector30~1            ; out0             ;
+; |PWM|Selector31~1            ; |PWM|Selector31~1            ; out0             ;
+; |PWM|Selector32~1            ; |PWM|Selector32~1            ; out0             ;
+; |PWM|Selector33~1            ; |PWM|Selector33~1            ; out0             ;
+; |PWM|LessThan0~1             ; |PWM|LessThan0~1             ; out0             ;
+; |PWM|LessThan0~2             ; |PWM|LessThan0~2             ; out0             ;
+; |PWM|LessThan0~3             ; |PWM|LessThan0~3             ; out0             ;
+; |PWM|LessThan0~4             ; |PWM|LessThan0~4             ; out0             ;
+; |PWM|LessThan0~5             ; |PWM|LessThan0~5             ; out0             ;
+; |PWM|LessThan0~6             ; |PWM|LessThan0~6             ; out0             ;
+; |PWM|LessThan0~7             ; |PWM|LessThan0~7             ; out0             ;
+; |PWM|LessThan0~8             ; |PWM|LessThan0~8             ; out0             ;
+; |PWM|LessThan0~9             ; |PWM|LessThan0~9             ; out0             ;
+; |PWM|LessThan0~10            ; |PWM|LessThan0~10            ; out0             ;
+; |PWM|LessThan0~11            ; |PWM|LessThan0~11            ; out0             ;
+; |PWM|LessThan0~12            ; |PWM|LessThan0~12            ; out0             ;
+; |PWM|LessThan0~13            ; |PWM|LessThan0~13            ; out0             ;
+; |PWM|LessThan0~14            ; |PWM|LessThan0~14            ; out0             ;
+; |PWM|LessThan0~15            ; |PWM|LessThan0~15            ; out0             ;
+; |PWM|LessThan0~16            ; |PWM|LessThan0~16            ; out0             ;
+; |PWM|LessThan0~17            ; |PWM|LessThan0~17            ; out0             ;
+; |PWM|LessThan0~18            ; |PWM|LessThan0~18            ; out0             ;
+; |PWM|LessThan0~19            ; |PWM|LessThan0~19            ; out0             ;
+; |PWM|LessThan0~20            ; |PWM|LessThan0~20            ; out0             ;
+; |PWM|LessThan0~21            ; |PWM|LessThan0~21            ; out0             ;
+; |PWM|LessThan0~22            ; |PWM|LessThan0~22            ; out0             ;
+; |PWM|LessThan0~23            ; |PWM|LessThan0~23            ; out0             ;
+; |PWM|LessThan0~24            ; |PWM|LessThan0~24            ; out0             ;
+; |PWM|LessThan0~25            ; |PWM|LessThan0~25            ; out0             ;
+; |PWM|LessThan0~26            ; |PWM|LessThan0~26            ; out0             ;
+; |PWM|LessThan0~27            ; |PWM|LessThan0~27            ; out0             ;
+; |PWM|LessThan0~28            ; |PWM|LessThan0~28            ; out0             ;
+; |PWM|LessThan0~29            ; |PWM|LessThan0~29            ; out0             ;
+; |PWM|LessThan0~30            ; |PWM|LessThan0~30            ; out0             ;
+; |PWM|LessThan1~0             ; |PWM|LessThan1~0             ; out0             ;
+; |PWM|LessThan1~1             ; |PWM|LessThan1~1             ; out0             ;
+; |PWM|LessThan1~2             ; |PWM|LessThan1~2             ; out0             ;
+; |PWM|LessThan1~3             ; |PWM|LessThan1~3             ; out0             ;
+; |PWM|LessThan1~4             ; |PWM|LessThan1~4             ; out0             ;
+; |PWM|LessThan1~5             ; |PWM|LessThan1~5             ; out0             ;
+; |PWM|LessThan1~6             ; |PWM|LessThan1~6             ; out0             ;
+; |PWM|LessThan1~7             ; |PWM|LessThan1~7             ; out0             ;
+; |PWM|LessThan1~8             ; |PWM|LessThan1~8             ; out0             ;
+; |PWM|LessThan1~9             ; |PWM|LessThan1~9             ; out0             ;
+; |PWM|LessThan1~10            ; |PWM|LessThan1~10            ; out0             ;
+; |PWM|LessThan1~11            ; |PWM|LessThan1~11            ; out0             ;
+; |PWM|LessThan1~12            ; |PWM|LessThan1~12            ; out0             ;
+; |PWM|LessThan1~13            ; |PWM|LessThan1~13            ; out0             ;
+; |PWM|LessThan1~14            ; |PWM|LessThan1~14            ; out0             ;
+; |PWM|LessThan1~15            ; |PWM|LessThan1~15            ; out0             ;
+; |PWM|LessThan1~16            ; |PWM|LessThan1~16            ; out0             ;
+; |PWM|LessThan1~17            ; |PWM|LessThan1~17            ; out0             ;
+; |PWM|LessThan1~18            ; |PWM|LessThan1~18            ; out0             ;
+; |PWM|LessThan1~19            ; |PWM|LessThan1~19            ; out0             ;
+; |PWM|LessThan1~20            ; |PWM|LessThan1~20            ; out0             ;
+; |PWM|LessThan1~21            ; |PWM|LessThan1~21            ; out0             ;
+; |PWM|LessThan1~22            ; |PWM|LessThan1~22            ; out0             ;
+; |PWM|LessThan1~23            ; |PWM|LessThan1~23            ; out0             ;
+; |PWM|LessThan1~24            ; |PWM|LessThan1~24            ; out0             ;
+; |PWM|LessThan1~25            ; |PWM|LessThan1~25            ; out0             ;
+; |PWM|LessThan1~26            ; |PWM|LessThan1~26            ; out0             ;
+; |PWM|LessThan1~27            ; |PWM|LessThan1~27            ; out0             ;
+; |PWM|LessThan1~28            ; |PWM|LessThan1~28            ; out0             ;
+; |PWM|LessThan1~29            ; |PWM|LessThan1~29            ; out0             ;
+; |PWM|LessThan1~30            ; |PWM|LessThan1~30            ; out0             ;
+; |PWM|LessThan1~31            ; |PWM|LessThan1~31            ; out0             ;
+; |PWM|LessThan1~32            ; |PWM|LessThan1~32            ; out0             ;
+; |PWM|Add0~0                  ; |PWM|Add0~0                  ; out0             ;
+; |PWM|Add0~1                  ; |PWM|Add0~1                  ; out0             ;
+; |PWM|Add0~2                  ; |PWM|Add0~2                  ; out0             ;
+; |PWM|Add0~3                  ; |PWM|Add0~3                  ; out0             ;
+; |PWM|Add0~4                  ; |PWM|Add0~4                  ; out0             ;
+; |PWM|Add0~5                  ; |PWM|Add0~5                  ; out0             ;
+; |PWM|Add0~6                  ; |PWM|Add0~6                  ; out0             ;
+; |PWM|Add0~7                  ; |PWM|Add0~7                  ; out0             ;
+; |PWM|Add0~8                  ; |PWM|Add0~8                  ; out0             ;
+; |PWM|Add0~9                  ; |PWM|Add0~9                  ; out0             ;
+; |PWM|Add0~10                 ; |PWM|Add0~10                 ; out0             ;
+; |PWM|Add0~11                 ; |PWM|Add0~11                 ; out0             ;
+; |PWM|Add0~12                 ; |PWM|Add0~12                 ; out0             ;
+; |PWM|Add0~13                 ; |PWM|Add0~13                 ; out0             ;
+; |PWM|Add0~14                 ; |PWM|Add0~14                 ; out0             ;
+; |PWM|Add0~15                 ; |PWM|Add0~15                 ; out0             ;
+; |PWM|Add0~16                 ; |PWM|Add0~16                 ; out0             ;
+; |PWM|Add0~17                 ; |PWM|Add0~17                 ; out0             ;
+; |PWM|Add0~18                 ; |PWM|Add0~18                 ; out0             ;
+; |PWM|Add0~19                 ; |PWM|Add0~19                 ; out0             ;
+; |PWM|Add0~20                 ; |PWM|Add0~20                 ; out0             ;
+; |PWM|Add0~21                 ; |PWM|Add0~21                 ; out0             ;
+; |PWM|Add0~22                 ; |PWM|Add0~22                 ; out0             ;
+; |PWM|Add0~23                 ; |PWM|Add0~23                 ; out0             ;
+; |PWM|Add0~24                 ; |PWM|Add0~24                 ; out0             ;
+; |PWM|Add0~25                 ; |PWM|Add0~25                 ; out0             ;
+; |PWM|Add0~26                 ; |PWM|Add0~26                 ; out0             ;
+; |PWM|Add0~27                 ; |PWM|Add0~27                 ; out0             ;
+; |PWM|Add0~28                 ; |PWM|Add0~28                 ; out0             ;
+; |PWM|Add0~29                 ; |PWM|Add0~29                 ; out0             ;
+; |PWM|Add0~30                 ; |PWM|Add0~30                 ; out0             ;
+; |PWM|Add0~31                 ; |PWM|Add0~31                 ; out0             ;
+; |PWM|Add0~32                 ; |PWM|Add0~32                 ; out0             ;
+; |PWM|Add0~33                 ; |PWM|Add0~33                 ; out0             ;
+; |PWM|Add0~34                 ; |PWM|Add0~34                 ; out0             ;
+; |PWM|Add0~35                 ; |PWM|Add0~35                 ; out0             ;
+; |PWM|Add0~36                 ; |PWM|Add0~36                 ; out0             ;
+; |PWM|Add0~37                 ; |PWM|Add0~37                 ; out0             ;
+; |PWM|Add0~38                 ; |PWM|Add0~38                 ; out0             ;
+; |PWM|Add0~39                 ; |PWM|Add0~39                 ; out0             ;
+; |PWM|Add0~40                 ; |PWM|Add0~40                 ; out0             ;
+; |PWM|Add0~41                 ; |PWM|Add0~41                 ; out0             ;
+; |PWM|Add0~42                 ; |PWM|Add0~42                 ; out0             ;
+; |PWM|Add0~43                 ; |PWM|Add0~43                 ; out0             ;
+; |PWM|Add0~44                 ; |PWM|Add0~44                 ; out0             ;
+; |PWM|Add0~45                 ; |PWM|Add0~45                 ; out0             ;
+; |PWM|Add0~46                 ; |PWM|Add0~46                 ; out0             ;
+; |PWM|Add0~47                 ; |PWM|Add0~47                 ; out0             ;
+; |PWM|Add0~48                 ; |PWM|Add0~48                 ; out0             ;
+; |PWM|Add0~49                 ; |PWM|Add0~49                 ; out0             ;
+; |PWM|Add0~50                 ; |PWM|Add0~50                 ; out0             ;
+; |PWM|Add0~51                 ; |PWM|Add0~51                 ; out0             ;
+; |PWM|Add0~52                 ; |PWM|Add0~52                 ; out0             ;
+; |PWM|Add0~53                 ; |PWM|Add0~53                 ; out0             ;
+; |PWM|Add0~54                 ; |PWM|Add0~54                 ; out0             ;
+; |PWM|Add0~55                 ; |PWM|Add0~55                 ; out0             ;
+; |PWM|Add0~56                 ; |PWM|Add0~56                 ; out0             ;
+; |PWM|Add0~57                 ; |PWM|Add0~57                 ; out0             ;
+; |PWM|Add0~58                 ; |PWM|Add0~58                 ; out0             ;
+; |PWM|Add0~59                 ; |PWM|Add0~59                 ; out0             ;
+; |PWM|Add0~60                 ; |PWM|Add0~60                 ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |PWM|state.start             ; |PWM|state.start             ; regout           ;
+; |PWM|state.toggle            ; |PWM|state.toggle            ; regout           ;
+; |PWM|next_state.resetCounter ; |PWM|next_state.resetCounter ; out              ;
+; |PWM|state.resetCounter      ; |PWM|state.resetCounter      ; regout           ;
+; |PWM|reset                   ; |PWM|reset                   ; out              ;
+; |PWM|PWM_out                 ; |PWM|PWM_out                 ; pin_out          ;
+; |PWM|state~1                 ; |PWM|state~1                 ; out0             ;
+; |PWM|Selector0~0             ; |PWM|Selector0~0             ; out0             ;
+; |PWM|PWM_out~0               ; |PWM|PWM_out~0               ; out0             ;
+; |PWM|state.resetCounter~0    ; |PWM|state.resetCounter~0    ; out0             ;
+; |PWM|Selector0~1             ; |PWM|Selector0~1             ; out0             ;
+; |PWM|state~9                 ; |PWM|state~9                 ; out0             ;
+; |PWM|Selector0~2             ; |PWM|Selector0~2             ; out0             ;
+; |PWM|Selector0~3             ; |PWM|Selector0~3             ; out0             ;
+; |PWM|Selector1~0             ; |PWM|Selector1~0             ; out0             ;
+; |PWM|Selector1~1             ; |PWM|Selector1~1             ; out0             ;
+; |PWM|Selector1~2             ; |PWM|Selector1~2             ; out0             ;
+; |PWM|Selector2~0             ; |PWM|Selector2~0             ; out0             ;
+; |PWM|Selector3~1             ; |PWM|Selector3~1             ; out0             ;
+; |PWM|Selector4~1             ; |PWM|Selector4~1             ; out0             ;
+; |PWM|Selector5~1             ; |PWM|Selector5~1             ; out0             ;
+; |PWM|Selector6~1             ; |PWM|Selector6~1             ; out0             ;
+; |PWM|Selector7~1             ; |PWM|Selector7~1             ; out0             ;
+; |PWM|Selector8~1             ; |PWM|Selector8~1             ; out0             ;
+; |PWM|Selector9~1             ; |PWM|Selector9~1             ; out0             ;
+; |PWM|Selector10~1            ; |PWM|Selector10~1            ; out0             ;
+; |PWM|Selector11~1            ; |PWM|Selector11~1            ; out0             ;
+; |PWM|Selector12~1            ; |PWM|Selector12~1            ; out0             ;
+; |PWM|Selector13~1            ; |PWM|Selector13~1            ; out0             ;
+; |PWM|Selector14~1            ; |PWM|Selector14~1            ; out0             ;
+; |PWM|Selector15~1            ; |PWM|Selector15~1            ; out0             ;
+; |PWM|Selector16~1            ; |PWM|Selector16~1            ; out0             ;
+; |PWM|Selector17~1            ; |PWM|Selector17~1            ; out0             ;
+; |PWM|Selector18~1            ; |PWM|Selector18~1            ; out0             ;
+; |PWM|Selector19~1            ; |PWM|Selector19~1            ; out0             ;
+; |PWM|Selector20~1            ; |PWM|Selector20~1            ; out0             ;
+; |PWM|Selector21~1            ; |PWM|Selector21~1            ; out0             ;
+; |PWM|Selector22~1            ; |PWM|Selector22~1            ; out0             ;
+; |PWM|Selector23~1            ; |PWM|Selector23~1            ; out0             ;
+; |PWM|Selector24~1            ; |PWM|Selector24~1            ; out0             ;
+; |PWM|Selector25~1            ; |PWM|Selector25~1            ; out0             ;
+; |PWM|Selector26~1            ; |PWM|Selector26~1            ; out0             ;
+; |PWM|Selector27~1            ; |PWM|Selector27~1            ; out0             ;
+; |PWM|Selector28~1            ; |PWM|Selector28~1            ; out0             ;
+; |PWM|Selector29~1            ; |PWM|Selector29~1            ; out0             ;
+; |PWM|Selector30~1            ; |PWM|Selector30~1            ; out0             ;
+; |PWM|Selector31~1            ; |PWM|Selector31~1            ; out0             ;
+; |PWM|Selector32~1            ; |PWM|Selector32~1            ; out0             ;
+; |PWM|Selector33~1            ; |PWM|Selector33~1            ; out0             ;
+; |PWM|LessThan0~1             ; |PWM|LessThan0~1             ; out0             ;
+; |PWM|LessThan0~2             ; |PWM|LessThan0~2             ; out0             ;
+; |PWM|LessThan0~3             ; |PWM|LessThan0~3             ; out0             ;
+; |PWM|LessThan0~4             ; |PWM|LessThan0~4             ; out0             ;
+; |PWM|LessThan0~5             ; |PWM|LessThan0~5             ; out0             ;
+; |PWM|LessThan0~6             ; |PWM|LessThan0~6             ; out0             ;
+; |PWM|LessThan0~7             ; |PWM|LessThan0~7             ; out0             ;
+; |PWM|LessThan0~8             ; |PWM|LessThan0~8             ; out0             ;
+; |PWM|LessThan0~9             ; |PWM|LessThan0~9             ; out0             ;
+; |PWM|LessThan0~10            ; |PWM|LessThan0~10            ; out0             ;
+; |PWM|LessThan0~11            ; |PWM|LessThan0~11            ; out0             ;
+; |PWM|LessThan0~12            ; |PWM|LessThan0~12            ; out0             ;
+; |PWM|LessThan0~13            ; |PWM|LessThan0~13            ; out0             ;
+; |PWM|LessThan0~14            ; |PWM|LessThan0~14            ; out0             ;
+; |PWM|LessThan0~15            ; |PWM|LessThan0~15            ; out0             ;
+; |PWM|LessThan0~16            ; |PWM|LessThan0~16            ; out0             ;
+; |PWM|LessThan0~17            ; |PWM|LessThan0~17            ; out0             ;
+; |PWM|LessThan0~18            ; |PWM|LessThan0~18            ; out0             ;
+; |PWM|LessThan0~19            ; |PWM|LessThan0~19            ; out0             ;
+; |PWM|LessThan0~20            ; |PWM|LessThan0~20            ; out0             ;
+; |PWM|LessThan0~21            ; |PWM|LessThan0~21            ; out0             ;
+; |PWM|LessThan0~22            ; |PWM|LessThan0~22            ; out0             ;
+; |PWM|LessThan0~23            ; |PWM|LessThan0~23            ; out0             ;
+; |PWM|LessThan0~24            ; |PWM|LessThan0~24            ; out0             ;
+; |PWM|LessThan0~25            ; |PWM|LessThan0~25            ; out0             ;
+; |PWM|LessThan0~26            ; |PWM|LessThan0~26            ; out0             ;
+; |PWM|LessThan0~27            ; |PWM|LessThan0~27            ; out0             ;
+; |PWM|LessThan0~28            ; |PWM|LessThan0~28            ; out0             ;
+; |PWM|LessThan0~29            ; |PWM|LessThan0~29            ; out0             ;
+; |PWM|LessThan0~30            ; |PWM|LessThan0~30            ; out0             ;
+; |PWM|LessThan1~0             ; |PWM|LessThan1~0             ; out0             ;
+; |PWM|LessThan1~1             ; |PWM|LessThan1~1             ; out0             ;
+; |PWM|LessThan1~2             ; |PWM|LessThan1~2             ; out0             ;
+; |PWM|LessThan1~3             ; |PWM|LessThan1~3             ; out0             ;
+; |PWM|LessThan1~4             ; |PWM|LessThan1~4             ; out0             ;
+; |PWM|LessThan1~5             ; |PWM|LessThan1~5             ; out0             ;
+; |PWM|LessThan1~6             ; |PWM|LessThan1~6             ; out0             ;
+; |PWM|LessThan1~7             ; |PWM|LessThan1~7             ; out0             ;
+; |PWM|LessThan1~8             ; |PWM|LessThan1~8             ; out0             ;
+; |PWM|LessThan1~9             ; |PWM|LessThan1~9             ; out0             ;
+; |PWM|LessThan1~10            ; |PWM|LessThan1~10            ; out0             ;
+; |PWM|LessThan1~11            ; |PWM|LessThan1~11            ; out0             ;
+; |PWM|LessThan1~12            ; |PWM|LessThan1~12            ; out0             ;
+; |PWM|LessThan1~13            ; |PWM|LessThan1~13            ; out0             ;
+; |PWM|LessThan1~14            ; |PWM|LessThan1~14            ; out0             ;
+; |PWM|LessThan1~15            ; |PWM|LessThan1~15            ; out0             ;
+; |PWM|LessThan1~16            ; |PWM|LessThan1~16            ; out0             ;
+; |PWM|LessThan1~17            ; |PWM|LessThan1~17            ; out0             ;
+; |PWM|LessThan1~18            ; |PWM|LessThan1~18            ; out0             ;
+; |PWM|LessThan1~19            ; |PWM|LessThan1~19            ; out0             ;
+; |PWM|LessThan1~20            ; |PWM|LessThan1~20            ; out0             ;
+; |PWM|LessThan1~21            ; |PWM|LessThan1~21            ; out0             ;
+; |PWM|LessThan1~22            ; |PWM|LessThan1~22            ; out0             ;
+; |PWM|LessThan1~23            ; |PWM|LessThan1~23            ; out0             ;
+; |PWM|LessThan1~24            ; |PWM|LessThan1~24            ; out0             ;
+; |PWM|LessThan1~25            ; |PWM|LessThan1~25            ; out0             ;
+; |PWM|LessThan1~26            ; |PWM|LessThan1~26            ; out0             ;
+; |PWM|LessThan1~27            ; |PWM|LessThan1~27            ; out0             ;
+; |PWM|LessThan1~28            ; |PWM|LessThan1~28            ; out0             ;
+; |PWM|LessThan1~29            ; |PWM|LessThan1~29            ; out0             ;
+; |PWM|LessThan1~30            ; |PWM|LessThan1~30            ; out0             ;
+; |PWM|LessThan1~31            ; |PWM|LessThan1~31            ; out0             ;
+; |PWM|LessThan1~32            ; |PWM|LessThan1~32            ; out0             ;
+; |PWM|Add0~0                  ; |PWM|Add0~0                  ; out0             ;
+; |PWM|Add0~1                  ; |PWM|Add0~1                  ; out0             ;
+; |PWM|Add0~2                  ; |PWM|Add0~2                  ; out0             ;
+; |PWM|Add0~3                  ; |PWM|Add0~3                  ; out0             ;
+; |PWM|Add0~4                  ; |PWM|Add0~4                  ; out0             ;
+; |PWM|Add0~5                  ; |PWM|Add0~5                  ; out0             ;
+; |PWM|Add0~6                  ; |PWM|Add0~6                  ; out0             ;
+; |PWM|Add0~7                  ; |PWM|Add0~7                  ; out0             ;
+; |PWM|Add0~8                  ; |PWM|Add0~8                  ; out0             ;
+; |PWM|Add0~9                  ; |PWM|Add0~9                  ; out0             ;
+; |PWM|Add0~10                 ; |PWM|Add0~10                 ; out0             ;
+; |PWM|Add0~11                 ; |PWM|Add0~11                 ; out0             ;
+; |PWM|Add0~12                 ; |PWM|Add0~12                 ; out0             ;
+; |PWM|Add0~13                 ; |PWM|Add0~13                 ; out0             ;
+; |PWM|Add0~14                 ; |PWM|Add0~14                 ; out0             ;
+; |PWM|Add0~15                 ; |PWM|Add0~15                 ; out0             ;
+; |PWM|Add0~16                 ; |PWM|Add0~16                 ; out0             ;
+; |PWM|Add0~17                 ; |PWM|Add0~17                 ; out0             ;
+; |PWM|Add0~18                 ; |PWM|Add0~18                 ; out0             ;
+; |PWM|Add0~19                 ; |PWM|Add0~19                 ; out0             ;
+; |PWM|Add0~20                 ; |PWM|Add0~20                 ; out0             ;
+; |PWM|Add0~21                 ; |PWM|Add0~21                 ; out0             ;
+; |PWM|Add0~22                 ; |PWM|Add0~22                 ; out0             ;
+; |PWM|Add0~23                 ; |PWM|Add0~23                 ; out0             ;
+; |PWM|Add0~24                 ; |PWM|Add0~24                 ; out0             ;
+; |PWM|Add0~25                 ; |PWM|Add0~25                 ; out0             ;
+; |PWM|Add0~26                 ; |PWM|Add0~26                 ; out0             ;
+; |PWM|Add0~27                 ; |PWM|Add0~27                 ; out0             ;
+; |PWM|Add0~28                 ; |PWM|Add0~28                 ; out0             ;
+; |PWM|Add0~29                 ; |PWM|Add0~29                 ; out0             ;
+; |PWM|Add0~30                 ; |PWM|Add0~30                 ; out0             ;
+; |PWM|Add0~31                 ; |PWM|Add0~31                 ; out0             ;
+; |PWM|Add0~32                 ; |PWM|Add0~32                 ; out0             ;
+; |PWM|Add0~33                 ; |PWM|Add0~33                 ; out0             ;
+; |PWM|Add0~34                 ; |PWM|Add0~34                 ; out0             ;
+; |PWM|Add0~35                 ; |PWM|Add0~35                 ; out0             ;
+; |PWM|Add0~36                 ; |PWM|Add0~36                 ; out0             ;
+; |PWM|Add0~37                 ; |PWM|Add0~37                 ; out0             ;
+; |PWM|Add0~38                 ; |PWM|Add0~38                 ; out0             ;
+; |PWM|Add0~39                 ; |PWM|Add0~39                 ; out0             ;
+; |PWM|Add0~40                 ; |PWM|Add0~40                 ; out0             ;
+; |PWM|Add0~41                 ; |PWM|Add0~41                 ; out0             ;
+; |PWM|Add0~42                 ; |PWM|Add0~42                 ; out0             ;
+; |PWM|Add0~43                 ; |PWM|Add0~43                 ; out0             ;
+; |PWM|Add0~44                 ; |PWM|Add0~44                 ; out0             ;
+; |PWM|Add0~45                 ; |PWM|Add0~45                 ; out0             ;
+; |PWM|Add0~46                 ; |PWM|Add0~46                 ; out0             ;
+; |PWM|Add0~47                 ; |PWM|Add0~47                 ; out0             ;
+; |PWM|Add0~48                 ; |PWM|Add0~48                 ; out0             ;
+; |PWM|Add0~49                 ; |PWM|Add0~49                 ; out0             ;
+; |PWM|Add0~50                 ; |PWM|Add0~50                 ; out0             ;
+; |PWM|Add0~51                 ; |PWM|Add0~51                 ; out0             ;
+; |PWM|Add0~52                 ; |PWM|Add0~52                 ; out0             ;
+; |PWM|Add0~53                 ; |PWM|Add0~53                 ; out0             ;
+; |PWM|Add0~54                 ; |PWM|Add0~54                 ; out0             ;
+; |PWM|Add0~55                 ; |PWM|Add0~55                 ; out0             ;
+; |PWM|Add0~56                 ; |PWM|Add0~56                 ; out0             ;
+; |PWM|Add0~57                 ; |PWM|Add0~57                 ; out0             ;
+; |PWM|Add0~58                 ; |PWM|Add0~58                 ; out0             ;
+; |PWM|Add0~59                 ; |PWM|Add0~59                 ; out0             ;
+; |PWM|Add0~60                 ; |PWM|Add0~60                 ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue May 26 01:16:38 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off PWM -c PWM
+Info: Using vector source file "C:/Users/Jet/Desktop/PWM/PWM.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       1.70 %
+Info: Number of transitions in simulation is 607
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 149 megabytes
+    Info: Processing ended: Tue May 26 01:16:38 2015
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
